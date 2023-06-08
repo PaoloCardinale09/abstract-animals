@@ -1,6 +1,6 @@
 package org.lessons.java.animals;
 
-public class Delfino extends Animal implements HasFly {
+public class Delfino extends Animal implements HasSwim {
     public Delfino(String name) {
         super(name);
     }
@@ -17,7 +17,7 @@ public class Delfino extends Animal implements HasFly {
     }
 
     @Override
-    public void vola() {
+    public void nuota() {
         System.out.println("Sto nuotando!!!");
     }
 }

@@ -1,6 +1,14 @@
 package org.lessons.java.animals;
 
 public class Main {
+    public static void makeSwim(HasSwim animal) {
+        animal.nuota();
+    }
+
+    public static void makeFly(HasFly animal) {
+        animal.vola();
+    }
+
     public static void main(String[] args) {
         Animal[] farm = new Animal[4];
         farm[0] = new Aquila("Olimpia");
@@ -13,8 +21,17 @@ public class Main {
             a.dormi();
             a.mangia();
             a.verso();
+            if (a instanceof HasSwim) {
+                makeSwim((HasSwim) a);
+            }
+            if (a instanceof HasFly) {
+                makeFly((HasFly) a);
+            }
             System.out.println("\n");
+
         }
+
+
     }
 
 }
